@@ -1,0 +1,7 @@
+FROM node:12-alpine
+
+WORKDIR /usr/src/app
+COPY package-lock.json package.json ./
+RUN npm ci --dev
+COPY ./bundles-src/ ./bundles-src/
+CMD ./node_modules/.bin/parcel watch bundles-src/index.js --dist-dir bundles --public-url="./"
