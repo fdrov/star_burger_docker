@@ -13,7 +13,9 @@
 Сервером приложения и статики выступает djando runserver.
 
 `docker compose -f compose.dev.yml up -d --build`
+
 `docker compose -f compose.dev.yaml down` остановить
+
 `docker compose -f compose.dev.yaml down -v` остановить с удалением volumes
 
 ### Staging
